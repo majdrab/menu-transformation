@@ -1,0 +1,281 @@
+/* ==========================
+/*        *CSS RESET*         */
+/* ========================== */
+
+/* http://meyerweb.com/eric/tools/css/reset/ 
+   v2.0 | 20110126
+   License: none (public domain)
+*/
+
+html,
+body,
+div,
+span,
+applet,
+object,
+iframe,
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+p,
+blockquote,
+pre,
+a,
+abbr,
+acronym,
+address,
+big,
+cite,
+code,
+del,
+dfn,
+em,
+img,
+ins,
+kbd,
+q,
+s,
+samp,
+small,
+strike,
+strong,
+sub,
+sup,
+tt,
+var,
+b,
+u,
+i,
+center,
+dl,
+dt,
+dd,
+ol,
+ul,
+li,
+fieldset,
+form,
+label,
+legend,
+table,
+caption,
+tbody,
+tfoot,
+thead,
+tr,
+th,
+td,
+article,
+aside,
+canvas,
+details,
+embed,
+figure,
+figcaption,
+footer,
+header,
+hgroup,
+main,
+menu,
+nav,
+output,
+ruby,
+section,
+summary,
+time,
+mark,
+audio,
+video {
+	margin: 0;
+	padding: 0;
+	border: 0;
+	font-size: 100%;
+	font: inherit;
+	vertical-align: baseline;
+	box-sizing: border-box;
+}
+/* HTML5 display-role reset for older browsers */
+article,
+aside,
+details,
+figcaption,
+figure,
+footer,
+header,
+hgroup,
+main,
+menu,
+nav,
+section {
+	display: block;
+}
+body {
+	line-height: 1;
+}
+ol,
+ul {
+	list-style: none;
+}
+blockquote,
+q {
+	quotes: none;
+}
+blockquote:before,
+blockquote:after,
+q:before,
+q:after {
+	content: "";
+	content: none;
+}
+table {
+	border-collapse: collapse;
+	border-spacing: 0;
+}
+
+/* Remove formatting from links*/
+a {
+	color: inherit;
+	text-decoration: none;
+}
+
+/* ========================== */
+/*        *MY STYLES*         */
+/* ========================== */
+
+body {
+	font-family: "Lato", sans-serif;
+	font-weight: 500;
+	background-color: #d2d6e2;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	height: 100vh;
+}
+
+.container {
+	width: 250px;
+	height: 450px;
+	position: absolute;
+	background-color: #fff;
+	border-radius: 10px;
+	display: flex;
+	flex-direction: column;
+	justify-content: space-around;
+	color: #666970;
+	font-size: 1.1rem;
+	box-shadow: 0 50px 50px rgba(0, 0, 0, 0.068);
+}
+.break {
+	border-bottom: 1px solid #f2f3f8;
+}
+.items-wrapper {
+	display: flex;
+	flex-direction: column;
+	align-items: left;
+}
+.items-wrapper a {
+	height: 43px;
+	background-color: transparent;
+	border-radius: 8px;
+	margin: 1px 10px;
+	display: flex;
+	justify-content: left;
+	align-items: center;
+	transition: background-color 0.3s;
+}
+#expendable {
+	justify-content: space-between;
+}
+.items-wrapper a .left {
+	display: flex;
+	flex-direction: row;
+	justify-content: left;
+}
+.items-wrapper a:hover {
+	background-color: #f2f3f8;
+	border-radius: 8px;
+}
+.items-wrapper a:hover .icon {
+	color: #666970;
+}
+.items-wrapper .active {
+	background-color: #f2f3f8;
+	border-radius: 8px;
+}
+.items-wrapper .active .icon {
+	color: #666970;
+}
+.items-wrapper a .icon {
+	width: 40px;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	color: #a5a6ae;
+	transition: color 0.3s;
+}
+.items-wrapper .status {
+	width: 250px;
+	height: 190px;
+	position: absolute;
+	background-color: #fff;
+	border-radius: 10px;
+	display: flex;
+	flex-direction: column;
+	justify-content: center;
+	color: #666970;
+	font-size: 1.1rem;
+	box-shadow: 0 50px 50px rgba(0, 0, 0, 0.068);
+	left: 252px;
+}
+.items-wrapper .status .needs-review {
+	color: #fc8f29;
+	text-shadow: -0.5px -0.5px 0 transparent, 0.5px -0.5px 0 transparent,
+		-0.5px 0.5px 0 transparent, 0.5px 0.5px 0 transparent;
+	transition: text-shadow 0.3s;
+}
+.items-wrapper .status a:hover .needs-review {
+	color: #fc8f29;
+	text-shadow: -0.5px -0.5px 0 #fc8f29, 0.5px -0.5px 0 #fc8f29,
+		-0.5px 0.5px 0 #fc8f29, 0.5px 0.5px 0 #fc8f29;
+}
+.items-wrapper .status .in-progress {
+	color: #3d6ef9;
+	text-shadow: -0.5px -0.5px 0 transparent, 0.5px -0.5px 0 transparent,
+		-0.5px 0.5px 0 transparent, 0.5px 0.5px 0 transparent;
+	transition: text-shadow 0.3s;
+}
+.items-wrapper .status a:hover .in-progress {
+	color: #3d6ef9;
+	text-shadow: -0.5px -0.5px 0 #3d6ef9, 0.5px -0.5px 0 #3d6ef9,
+		-0.5px 0.5px 0 #3d6ef9, 0.5px 0.5px 0 #3d6ef9;
+}
+.items-wrapper .status .approved {
+	color: #3ba7a1;
+	text-shadow: -0.5px -0.5px 0 transparent, 0.5px -0.5px 0 transparent,
+		-0.5px 0.5px 0 transparent, 0.5px 0.5px 0 transparent;
+	transition: text-shadow 0.3s;
+}
+.items-wrapper .status a:hover .approved {
+	color: #3ba7a1;
+	text-shadow: -0.5px -0.5px 0 #3ba7a1, 0.5px -0.5px 0 #3ba7a1,
+		-0.5px 0.5px 0 #3ba7a1, 0.5px 0.5px 0 #3ba7a1;
+}
+.items-wrapper .status .no-status {
+	text-shadow: -0.5px -0.5px 0 transparent, 0.5px -0.5px 0 transparent,
+		-0.5px 0.5px 0 transparent, 0.5px 0.5px 0 transparent;
+	transition: text-shadow 0.3s;
+}
+.items-wrapper .status a:hover .no-status {
+	text-shadow: -0.5px -0.5px 0 #666970, 0.5px -0.5px 0 #666970,
+		-0.5px 0.5px 0 #666970, 0.5px 0.5px 0 #666970;
+}
+.items-wrapper .status .current-status {
+	font-weight: 700;
+}
+.items-wrapper .status .current-status .fa-check {
+	color: #3d6ef9;
+	font-size: 0.8rem;
+}
